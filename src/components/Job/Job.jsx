@@ -1,7 +1,9 @@
 // import { IoLocationOutline } from "react-icons/ai";
 
-const Job = ({job}) => {
-    const {logo, job_title,
+import { Link } from "react-router-dom";
+
+const Job = ({job,}) => {
+    const {id, logo, job_title,
          company_name, 
          remote_or_onsite,location, 
          job_type,salary, job_description, 
@@ -21,7 +23,9 @@ const Job = ({job}) => {
             {/* <h2 className="flex"><IoLocationOutline className="text-2xl mr-2"></IoLocationOutline>{location}</h2> */}
           </div>
           <div className="card-actions">
+            <Link to={`/job/${id}`}>
             <button className="btn btn-primary">View Details</button>
+            </Link>
           </div>
         </div>
       </div>
